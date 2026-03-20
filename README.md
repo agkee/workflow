@@ -7,7 +7,7 @@ This workspace captures a planning-first workflow for teams that want humans to 
 - [Meeting-note task extraction prompt](/Users/jeff/Dev/projects/workflow/prompts/extract-tasks-from-meeting-notes.md)
 - [User clarification prompt](/Users/jeff/Dev/projects/workflow/prompts/clarify-ideas-into-task-pack.md)
 - [Task list schema](/Users/jeff/Dev/projects/workflow/schemas/task-list.schema.md)
-- [Example task list](/Users/jeff/Dev/projects/workflow/examples/task-list.example.yaml)
+- [Example task list](/Users/jeff/Dev/projects/workflow/schemas/task-list.example.yaml)
 - [Structured meeting template](/Users/jeff/Dev/projects/workflow/templates/structured-meeting-template.md)
 
 ## Quick start
