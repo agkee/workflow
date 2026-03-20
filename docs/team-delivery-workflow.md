@@ -101,7 +101,7 @@ Each participant spends a short session with an agent before the meeting. The ag
 
 This step is especially important for non-developers because it lets them contribute clear intent without needing to invent technical solutions.
 
-Use [the clarification prompt](/Users/jeff/Dev/projects/workflow/prompts/clarify-ideas-into-task-pack.md) for this step.
+Use [the clarification prompt](../prompts/clarify-ideas-into-task-pack.md) for this step.
 
 ### Step 3: Run the meeting around top-of-mind problems
 
@@ -125,16 +125,16 @@ Meeting notes should be produced automatically if possible, but they need struct
 - open questions that still block implementation
 - non-work or unrelated discussion
 
-Use [the meeting template](/Users/jeff/Dev/projects/workflow/templates/structured-meeting-template.md) to keep the notes parseable.
+Use [the meeting template](../templates/structured-meeting-template.md) to keep the notes parseable.
 
 ### Step 5: Generate `task-list.yaml`
 
-Run the meeting notes through [the extraction prompt](/Users/jeff/Dev/projects/workflow/prompts/extract-tasks-from-meeting-notes.md). The output should:
+Run the meeting notes through [the extraction prompt](../prompts/extract-tasks-from-meeting-notes.md). The output should:
 
 - exclude unrelated conversation
 - consolidate duplicates
 - include only implementation-ready tasks
-- match [the shared schema](/Users/jeff/Dev/projects/workflow/schemas/task-list.schema.md)
+- match [the shared schema](../schemas/task-list.schema.md)
 - produce a single file named `task-list.yaml`
 
 ### Step 6: Optional human confirmation
@@ -194,7 +194,7 @@ The user describes the feature, pain point, or desired outcome. The agent should
 - separate facts from assumptions
 - produce `task-list.yaml` only when the tasks are concrete enough to execute
 
-Use [the clarification prompt](/Users/jeff/Dev/projects/workflow/prompts/clarify-ideas-into-task-pack.md) here as well.
+Use [the clarification prompt](../prompts/clarify-ideas-into-task-pack.md) here as well.
 
 ### Step 2: Create `task-list.yaml`
 
@@ -270,7 +270,7 @@ A task is only implementation-ready if it meets all of the following:
 
 ### Required structure for each task
 
-The shared file format is defined in [task-list.schema.md](/Users/jeff/Dev/projects/workflow/schemas/task-list.schema.md). Each task in `task-list.yaml` must use:
+The shared file format is defined in [task-list.schema.md](../schemas/task-list.schema.md). Each task in `task-list.yaml` must use:
 
 - `id`
 - `title`
@@ -363,11 +363,11 @@ Use those answers to update:
 
 ## Recommended artifacts in this workspace
 
-- [Meeting-note task extraction prompt](/Users/jeff/Dev/projects/workflow/prompts/extract-tasks-from-meeting-notes.md)
-- [User clarification prompt](/Users/jeff/Dev/projects/workflow/prompts/clarify-ideas-into-task-pack.md)
-- [Task list schema](/Users/jeff/Dev/projects/workflow/schemas/task-list.schema.md)
-- [Example task list](/Users/jeff/Dev/projects/workflow/examples/task-list.example.yaml)
-- [Structured meeting template](/Users/jeff/Dev/projects/workflow/templates/structured-meeting-template.md)
+- [Meeting-note task extraction prompt](../prompts/extract-tasks-from-meeting-notes.md)
+- [User clarification prompt](../prompts/clarify-ideas-into-task-pack.md)
+- [Task list schema](../schemas/task-list.schema.md)
+- [Example task list](../schemas/task-list.example.yaml)
+- [Structured meeting template](../templates/structured-meeting-template.md)
 
 ## Suggested facilitator message before a team meeting
 
