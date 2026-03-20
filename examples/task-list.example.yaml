@@ -1,0 +1,38 @@
+tasks:
+  - id: T01
+    title: Add meeting note cleanup step
+    goal: Convert raw meeting transcripts into structured notes before task extraction so unrelated discussion is excluded consistently.
+    steps:
+      - Add a preprocessing step that rewrites raw transcripts into the structured meeting-note template.
+      - Ensure the preprocessing step preserves decisions, constraints, task candidates, and open questions.
+      - Exclude small talk and unrelated conversation from the cleaned notes output.
+    depends_on: []
+    done_when:
+      - A raw transcript can be converted into structured notes with clearly labeled decisions, task candidates, and open questions.
+      - Unrelated conversation is not carried into the cleaned notes output.
+      - The cleaned notes are usable as input to the task extraction prompt without manual reformatting.
+    notes:
+      - "Reference: Raw meeting transcript"
+      - "Reference: Structured meeting template"
+      - "Reference: Meeting-note extraction prompt"
+      - "Not in scope: Changes to the Ralph implementation harness"
+      - "Not in scope: Automatic calendar integrations"
+
+  - id: T02
+    title: Generate task-list.yaml from structured notes
+    goal: Produce a standard YAML task list that the Ralph harness can consume directly.
+    steps:
+      - Generate task-list.yaml using the schema defined in schemas/task-list.schema.md.
+      - Include only implementation-ready tasks in recommended execution order.
+      - Ensure every task follows the shared YAML task structure.
+    depends_on:
+      - T01
+    done_when:
+      - The generated file follows the exact key structure defined by the schema.
+      - Tasks with unresolved ambiguity are excluded from the file.
+      - The task list is readable without extra summary sections.
+    notes:
+      - "Reference: Structured meeting notes"
+      - "Reference: Task list schema"
+      - "Not in scope: Implementing the tasks in the repo"
+      - "Not in scope: Human approval workflow automation"
